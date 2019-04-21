@@ -11,7 +11,7 @@
 #=====FUNÇÕES======
 function _INSTALAR_PACOTES(){
     while IFS= read -r pacote; do
-	apt-get install "$pacote" 2> /dev/null || echo "[ERRO]: $pacote não instalado!"
+	apt-get install "$pacote" > /dev/null || echo "[ERRO]: $pacote não instalado!"
     done < "$1"
 }
 #==================
